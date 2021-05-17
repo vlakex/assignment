@@ -10,14 +10,14 @@ public class RunRamblersBB {
 
     TerrainMap tm = new TerrainMap("tmc.pgm");
 
-    Coords initial = new Coords(6,2);
-    Coords goal = new Coords(8,0);
+    Coords start = new Coords(6,2);
+    Coords end = new Coords(8,0);
 
-    RamblersSearch s = new RamblersSearch(tm, goal);
+    RamblersSearch s = new RamblersSearch(tm, end);
 
     int startCost = tm.getTmap()[6][2];
     
-    SearchState search = (SearchState) new RamblersState(initial, startCost);
+    SearchState search = (SearchState) new RamblersState(start, startCost);
 
     String res_bb = s.runSearch(search, "branchAndBound");
     System.out.println(res_bb);

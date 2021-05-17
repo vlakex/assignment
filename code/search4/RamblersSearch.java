@@ -9,7 +9,7 @@ public class RamblersSearch extends Search {
     return map;
   }
 
-  public String getGoal() {
+  public Coords getGoal() {
     return goal;
   }
 
